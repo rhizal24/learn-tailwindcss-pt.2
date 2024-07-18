@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Part-2</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* * {
+        border: 1px solid red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="m-5 border border-red-500">
+      <!-- ! Core Concepts -->
+      <!-- Introduction Sekedar buat gambar besar penggunaan tailwindcss -->
+      <div
+        class="p-6 mx-auto max-w-sm bg-white shadow-md flex items-center space-x-4 border border-slate-200 rounded-xl my-[40px]"
+      >
+        <div class="shrink-0">
+          <img class="h-12 w-12" src="./img/mail.svg" alt="Mail-Box" />
+        </div>
+        <div>
+          <div class="text-xl font-medium text-black">MailPhone</div>
+          <p class="text-slate-400">You have a new message!</p>
+        </div>
+      </div>
+
+      <!-- Focus, Hover, Active kepake buat  -->
+      <div class="my-[40px] max-w-full">
+        <button
+          class="border-none block mx-auto max-w-full bg-sky-400 w-[135px] h-[40px] rounded-full text-white hover:bg-sky-600 active:bg-sky-800 focus:ring ring-sky-300 font-semibold shadow-md"
+        >
+          Click Me!
+        </button>
+      </div>
+
+      <!-- First, last, even, odd (contohnya tabel/odd/even) -->
+      <div
+        class="my-[20px] max-w-[400px] mx-auto rounded-xl shadow-md border border-slate-200"
+      >
+        <ul role="list" class="p-6 divide-y divide-slate-200">
+          <li class="flex py-4 first:pt-0 last:pb-0 items-center">
+            <div class="p-6 bg-lime-500 rounded-full"></div>
+            <div class="ml-3 overflow-hidden">
+              <p class="text-sm font-medium text-slate-900">Jhon Bahtera</p>
+              <p class="text-sm truncate text-slate-400">
+                Piye kabare lek sehat opo ora?
+              </p>
+            </div>
+            <p
+              class="text-center text-sm w-5 h-5 bg-slate-300 text-white rounded-full items-center ml-[72px]"
+            >
+              1
+            </p>
+          </li>
+          <li class="flex py-4 first:pt-0 last:pb-0 items-center">
+            <div class="p-6 bg-slate-900 rounded-full"></div>
+            <div class="ml-3 overflow-hidden">
+              <p class="text-sm font-medium text-slate-900">King Jarjit</p>
+              <p class="text-sm truncate text-slate-400">Udah push up blom?</p>
+            </div>
+            <p
+              class="text-center text-sm w-5 h-5 bg-slate-300 text-white rounded-full items-center ml-[131px]"
+            >
+              3
+            </p>
+          </li>
+          <li class="flex py-4 first:pt-0 last:pb-0 items-center">
+            <div class="p-6 bg-teal-400 rounded-full"></div>
+            <div class="ml-3 overflow-hidden">
+              <p class="text-sm font-medium text-slate-900">Toko Prabotan</p>
+              <p class="text-sm truncate text-slate-400">
+                ini gimana pak jadi diambil?
+              </p>
+            </div>
+            <p
+              class="text-center text-sm w-5 h-5 bg-slate-300 text-white rounded-full items-center ml-[88px]"
+            >
+              2
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Form states -->
+      <div
+        class="p-5 max-w-sm border border-slate-200 mx-auto max-h-full rounded-xl my-[40px] shadow-md"
+      >
+        <form action="">
+          <label for="" class="block">
+            <span
+              class="font-semibold text-lg after:content-['*'] after:ml-1 after:text-pink-500"
+              >Email</span
+            >
+            <input
+              type="email"
+              placeholder="Jhon@example.com"
+              class="peer block mt-1 w-full py-2 px-3 bg-slate-100 border border-slate-200 rounded-md text-slate-800 focus:border-2 focus:outline-none focus:border-sky-300 invalid:border-pink-500 invalid:text-pink-500 focus:invalid:text-pink-500 focus:invalid:border-pink-500 focus:shadow-lg focus:invalid:underline"
+            />
+            <p class="mt-1 invisible peer-invalid:visible text-pink-500">
+              Please provide a valid email address.
+            </p>
+          </label>
+        </form>
+        <button
+          class="px-6 py-2 bg-sky-400 rounded-full mx-auto text-white block mt-2 hover:bg-sky-500 active:bg-sky-600 active:ring-2 active:ring-sky-300 hover:shadow-md"
+        >
+          Save
+        </button>
+      </div>
+
+      <!-- Styling based on parent state (group-{modifier}) -->
+      <div
+        class="group max-w-xs mx-auto border border-slate-200 shadow-md my-[40px] p-5 rounded-xl hover:bg-sky-500"
+      >
+        <a
+          href=""
+          class="group bg-white hover:text-white group-hover:bg-sky-500"
+        >
+          <h3 class="font-bold text-slate-800 group-hover:text-white">
+            My Project
+          </h3>
+          <p class="text-slate-900 mt-2 group-hover:text-white">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+            nobis vitae exercitationem.
+          </p>
+        </a>
+      </div>
+
+      <!-- Diferrent peers -->
+      <div
+        class="max-w-sm p-5 my[40px] mx-auto border border-slate-200 rounded-xl shadow-md"
+      >
+        <fieldset class="block mx-auto">
+          <legend class="text-xl font-bold text-slate-300 mb-2 tracking-wide">
+            Publish Status
+          </legend>
+          <input id="draft" type="radio" class="peer/draft" name="status" />
+          <label
+            for=""
+            class="font-semibold1 text-slate-400 peer-checked/draft:text-sky-500 mr-4"
+            >Draft</label
+          >
+
+          <input
+            id="Published"
+            type="radio"
+            class="peer/publish"
+            name="status"
+          />
+          <label
+            for=""
+            class="font-semibold1 text-slate-400 peer-checked/publish:text-sky-500"
+            >Published</label
+          >
+          <div class="hidden peer-checked/draft:block mt-2">
+            Drafts are only visible to administrators.
+          </div>
+          <div class="hidden peer-checked/publish:block mt-2">
+            Your post will be publicy visible on your site.
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Stylling direct chilldern (*-{modifier}) -->
+      <div
+        class="max-w-lg rounded-xl my-[40px] border border-slate-200 shadow-md mx-auto flex flex-col space-y-4 items-center justify-center p-5"
+      >
+        <h2 class="font-semibold text-slate-400">Categories</h2>
+        <ul
+          class="*:inline-block *:rounded-full *:border-[1.5px] *:border-sky-200 *:bg-sky-800 *:px-3 *:py-1 *:text-center *:text-sky-300 *:text-sm *:m-0.5"
+        >
+          <li>Sales</li>
+          <li>Marketing</li>
+          <li>SEO</li>
+          <li>Analytics</li>
+          <li>Design</li>
+          <li>Strategy</li>
+          <li>Strategy</li>
+          <li>Security</li>
+          <li>Growth</li>
+          <li>UI/UX</li>
+          <li>Back-End</li>
+          <li>Front-End</li>
+          <li>Mobile</li>
+          <li>Fullstack</li>
+          <li>Content</li>
+          <li>Game Dev.</li>
+        </ul>
+      </div>
+
+      <!-- Before and After -->
+      <div
+        class="max-w-xl mx-auto rounded-xl border border-slate-200 shadow-md p-5 italic"
+      >
+        <blockquote class="font-semibold text-2xl text-center">
+          Tetaplah
+          <span class="relative mr-1">
+            <span
+              class="before:block before:absolute before:-inset-[0.5px] before:-skew-y-3 before:bg-pink-500 inline-block"
+            >
+            </span>
+            <span class="relative text-white">berusaha</span>
+          </span>
+          meski jalan terasa sulit, karena kesuksesan datang kepada mereka yang
+          pantang menyerah.
+        </blockquote>
+      </div>
+
+      <!-- Placeholder Text -->
+      <div
+        class="max-w-lg rounded-xl border border-slate-200 p-5 mx-auto my-[40px] shadow-md"
+      >
+        <div>
+          <form action="">
+            <label for="">
+              <input
+                type="text"
+                placeholder="Search for anything..."
+                class="peer block mt-1 w-full py-2 px-3 bg-slate-100 border border-slate-200 rounded-md text-slate-500 focus:border-2 focus:outline-none focus:border-sky-300 italic"
+              />
+            </label>
+          </form>
+        </div>
+      </div>
+
+      <!-- File input buttons -->
+      <div
+        class="max-w-sm rounded-xl border border-slate-200 p-5 mx-auto my-[40px] shadow-md"
+      >
+        <form action="" class="flex items-center space-x-6">
+          <label for="" class="block mx-auto">
+            <span class="font-semibold mb-4 block text-center text-slate-600"
+              >Choose Your File</span
+            >
+            <input
+              type="file"
+              class="block w-full font-semibold text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-none file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
+            />
+          </label>
+        </form>
+      </div>
+
+      <!-- List markers -->
+      <div
+        class="mx-auto max-w-xs rounded-xl border border-slate-200 shadow-md p-5 my[40px] dark:bg-slate-700"
+      >
+        <h2 class="font-semibold text-lg dark:text-slate-100 text-slate-500">
+          Menu
+        </h2>
+        <ul
+          role="list"
+          class="list-disc marker:text-pink-500 pl-5 space-y-2 text-slate-600 dark:text-slate-400 pt-3"
+        >
+          <li>Nasi goreng bumbu bali</li>
+          <li>Magelangan sate rendang</li>
+          <li>Orak-arik ayam kampung</li>
+          <li>Mie dok-dok blekedog</li>
+        </ul>
+      </div>
+
+      <!-- highlight text (selection) -->
+      <div
+        class="mx-auto p-5 rounded-xl max-w-xl border border-slate-200 shadow-md my-[40px]"
+      >
+        <div
+          class="py-2 text-slate-600 selection:bg-fuchsia-200 selection:text-fuchsia-800"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+            debitis. Modi magni animi ut nisi voluptatibus quod delectus, atque
+            inventore culpa consequuntur, placeat dolores! Itaque vel labore
+            blanditiis rem perferendis est vero voluptatibus, ipsa tenetur,
+            explicabo error sint eos a numquam dolorum ex aut deserunt expedita
+            earum adipisci facere. Eveniet, nesciunt natus! Ex vitae laboriosam
+            rerum tempora maiores itaque similique!
+          </p>
+        </div>
+      </div>
+
+      <!-- FIrst line and fist letter -->
+      <div
+        class="mx-auto max-w-lg border border-slate-200 shadow-md p-5 rounded-xl my-[40px]"
+      >
+        <p
+          class="first-line:uppercase first-line:tracking-widest first-letter:text-5xl first-letter:font-bold first-letter:text-black text-slate-600 first-letter:mr-2 first-letter:float-left"
+        >
+          Worem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+          nostrum cum id ipsa provident saepe sed incidunt dignissimos tempore,
+          repellendus doloremque eum delectus fugiat? Velit cum mollitia vitae
+          provident consequuntur?
+        </p>
+      </div>
+
+      <!-- Dialog Backdrops -->
+      <div
+        class="mx-auto max-w-xl rounded-xl border border-slate-200 shadow-md my-[40px] p-5 dark:bg-slate-700"
+      >
+        <dialog class="backdrop:bg-gray-100">
+          <form method="dialog">
+            <label for="" class="block">
+              <input type="radio" placeholder="Send a message..." />
+            </label>
+          </form>
+        </dialog>
+      </div>
+    </div>
+  </body>
+</html>
